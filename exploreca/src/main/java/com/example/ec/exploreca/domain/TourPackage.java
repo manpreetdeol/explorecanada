@@ -1,6 +1,6 @@
 package com.example.ec.exploreca.domain;
 
-import javax.persistence.Column;
+import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
