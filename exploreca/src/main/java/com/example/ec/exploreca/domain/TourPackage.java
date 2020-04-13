@@ -3,13 +3,16 @@ package com.example.ec.exploreca.domain;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Created by Manpreet Singh
  */
+@Table(name="tour_package")
 @Entity
-public class TourPackage {
+public class TourPackage implements Serializable{
     @Id
     private String code;
 

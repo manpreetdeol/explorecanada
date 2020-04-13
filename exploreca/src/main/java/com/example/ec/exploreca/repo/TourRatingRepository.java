@@ -6,11 +6,10 @@ import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.example.ec.exploreca.domain.TourRating;
-import com.example.ec.exploreca.domain.TourRatingPk;
 
 /**
  * Tour Rating Repository Interface
@@ -18,7 +17,7 @@ import com.example.ec.exploreca.domain.TourRatingPk;
  * Created by Manpreet
  */
 @RepositoryRestResource(exported = false)
-public interface TourRatingRepository extends CrudRepository<TourRating, TourRatingPk> {
+public interface TourRatingRepository extends JpaRepository<TourRating, Integer> {
 
     /**
      * Lookup all the TourRatings for a tour.
@@ -26,15 +25,22 @@ public interface TourRatingRepository extends CrudRepository<TourRating, TourRat
      * @param tourId is the tour Identifier
      * @return a List of any found TourRatings
      */
-    List<TourRating> findByPkTourId(Integer tourId);
+    List<TourRating> findByTourId(Integer tourId);
+
+    /**
+     * Lookup a page of TourRatings for a tour.
+     *
+     * @param tourId tourId is the tour Identifier
+     * @param pageable details for the desired page
+     * @return a Page of any found TourRatings
+     */
+    Page<TourRating> findByTourId(Integer tourId, Pageable pageable);
 
     /**
      * Lookup a TourRating by the TourId and Customer Id
-     * @param tourId tour identifier
-     * @param customerId customer identifier
-     * @return Optional of found TourRatings.
+     * @param tourId
+     * @param customerId
+     * @return TourRating if found, null otherwise.
      */
-    Optional<TourRating> findByPkTourIdAndPkCustomerId(Integer tourId, Integer customerId);
-    
-    Page<TourRating> findByPkTourId(Integer tourId, Pageable pageable);
+    Optional<TourRating> findByTourIdAndCustomerId(Integer tourId, Integer customerId);
 }

@@ -1,20 +1,25 @@
 package com.example.ec.exploreca.domain;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.util.Objects;
 
 /**
  * Created by Manpreet Singh
  */
 @Entity
-public class Tour {
+public class Tour implements Serializable{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
@@ -38,16 +43,15 @@ public class Tour {
     @Column
     private String keywords;
 
-
     @ManyToOne
+    @JoinColumn(name="tour_package_code")
     private TourPackage tourPackage;
 
     @Column
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Difficulty difficulty;
 
     @Column
-    @Enumerated
     private Region region;
 
     public Tour(String title, String description, String blurb, Integer price, String duration, String bullets,
