@@ -7,6 +7,8 @@ import java.util.OptionalDouble;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +27,7 @@ import com.example.ec.exploreca.repo.TourRepository;
 @Service
 @Transactional
 public class TourRatingService {
+	private static final Logger LOG = LoggerFactory.getLogger(TourRatingService.class);
     private TourRatingRepository tourRatingRepository;
     private TourRepository tourRepository;
 
@@ -144,6 +147,8 @@ public class TourRatingService {
     public Double getAverageScore(int tourId)  throws NoSuchElementException  {
         List<TourRating> ratings = tourRatingRepository.findByTourId(verifyTour(tourId).getId());
         OptionalDouble average = ratings.stream().mapToInt((rating) -> rating.getScore()).average();
+        
+        LOG.debug("Getting average score of ratings");
         return average.isPresent() ? average.getAsDouble():null;
     }
     /**

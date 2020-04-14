@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -27,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.ec.exploreca.domain.TourRating;
 import com.example.ec.exploreca.service.TourRatingService;
 
+
 /**
  * Tour Rating Controller
  *
@@ -35,6 +38,7 @@ import com.example.ec.exploreca.service.TourRatingService;
 @RestController
 @RequestMapping(path = "/tours/{tourId}/ratings")
 public class TourRatingController {
+	private static final Logger LOG = LoggerFactory.getLogger(TourRatingController.class);
     private TourRatingService tourRatingService;
 
     @Autowired
@@ -56,6 +60,7 @@ public class TourRatingController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createTourRating(@PathVariable(value = "tourId") int tourId, @RequestBody @Validated RatingDto ratingDto) {
         tourRatingService.createNew(tourId, ratingDto.getCustomerId(), ratingDto.getScore(), ratingDto.getComment());
+        LOG.info("Created new rating for tour " + tourId);
     }
 
     /**
@@ -85,6 +90,8 @@ public class TourRatingController {
         Page<TourRating> tourRatingPage = tourRatingService.lookupRatings(tourId, pageable);
         List<RatingDto> ratingDtoList = tourRatingPage.getContent()
                 .stream().map(tourRating -> toDto(tourRating)).collect(Collectors.toList());
+        
+        LOG.debug("Getting all ratings for tour " + tourId);
         return new PageImpl<RatingDto>(ratingDtoList, pageable, tourRatingPage.getTotalPages());
     }
 

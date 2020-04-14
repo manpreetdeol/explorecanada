@@ -1,0 +1,48 @@
+2020-04-14 00:07:15.491  INFO 4436 --- [main] c.e.e.e.ExplorecaApplicationTests        : Starting ExplorecaApplicationTests on YULN34675635A with PID 4436 (started by I855677 in C:\Users\i855677\Downloads\exploreca\exploreca)
+2020-04-14 00:07:15.492 DEBUG 4436 --- [main] c.e.e.e.ExplorecaApplicationTests        : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-14 00:07:15.502  INFO 4436 --- [main] c.e.e.e.ExplorecaApplicationTests        : No active profile set, falling back to default profiles: default
+2020-04-14 00:07:16.657  INFO 4436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 00:07:16.799  INFO 4436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129ms. Found 3 JPA repository interfaces.
+2020-04-14 00:07:17.483  INFO 4436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-14 00:07:17.786  INFO 4436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-14 00:07:18.130  INFO 4436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 00:07:18.246  INFO 4436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 00:07:18.458  INFO 4436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 00:07:19.590  INFO 4436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-04-14 00:07:20.355  INFO 4436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 00:07:20.368  INFO 4436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 00:07:21.716  WARN 4436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 00:07:21.930  INFO 4436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 00:07:22.495  INFO 4436 --- [main] c.e.e.e.ExplorecaApplicationTests        : Started ExplorecaApplicationTests in 7.301 seconds (JVM running for 8.661)
+2020-04-14 00:07:22.746  INFO 4436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-14 00:07:22.750  INFO 4436 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 00:07:22.752  INFO 4436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-14 00:07:22.757  INFO 4436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-14 00:07:32.736  INFO 5148 --- [main] c.e.ec.exploreca.ExplorecaApplication    : Starting ExplorecaApplication on YULN34675635A with PID 5148 (C:\Users\i855677\Downloads\exploreca\exploreca\target\classes started by I855677 in C:\Users\i855677\Downloads\exploreca\exploreca)
+2020-04-14 00:07:32.738 DEBUG 5148 --- [main] c.e.ec.exploreca.ExplorecaApplication    : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-14 00:07:32.738  INFO 5148 --- [main] c.e.ec.exploreca.ExplorecaApplication    : No active profile set, falling back to default profiles: default
+2020-04-14 00:07:33.328  INFO 5148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 00:07:33.381  INFO 5148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 3 JPA repository interfaces.
+2020-04-14 00:07:33.908  INFO 5148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-14 00:07:33.916  INFO 5148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-14 00:07:33.917  INFO 5148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 00:07:34.075  INFO 5148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-14 00:07:34.075  INFO 5148 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1310 ms
+2020-04-14 00:07:34.206  INFO 5148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-14 00:07:34.287  INFO 5148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-14 00:07:34.448  INFO 5148 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 00:07:34.487  INFO 5148 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 00:07:34.572  INFO 5148 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 00:07:34.657  INFO 5148 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-04-14 00:07:35.100  INFO 5148 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 00:07:35.105  INFO 5148 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 00:07:35.642  WARN 5148 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 00:07:35.741  INFO 5148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 00:07:36.025  INFO 5148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 00:07:36.028  INFO 5148 --- [main] c.e.ec.exploreca.ExplorecaApplication    : Started ExplorecaApplication in 3.552 seconds (JVM running for 5.093)
+2020-04-14 00:08:45.128  INFO 5148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 00:08:45.130  INFO 5148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-14 00:08:45.177  INFO 5148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 46 ms
+2020-04-14 00:08:45.375 DEBUG 5148 --- [http-nio-8080-exec-1] c.e.e.e.service.TourRatingService        : Getting average score of ratings
+2020-04-14 00:09:51.388 DEBUG 5148 --- [http-nio-8080-exec-4] c.e.e.e.web.TourRatingController         : Getting all reating for tour 1
+2020-04-14 00:10:23.815  INFO 5148 --- [http-nio-8080-exec-5] c.e.e.e.web.TourRatingController         : Created new rating for tour 1
