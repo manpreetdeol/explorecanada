@@ -115,8 +115,18 @@ public class TourRating {
     public void setComment(String comment) {
         this.comment = comment;
     }
+    
+    
 
-    @Override
+    public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

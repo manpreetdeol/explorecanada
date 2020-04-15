@@ -46,3 +46,8 @@
 2020-04-14 00:08:45.375 DEBUG 5148 --- [http-nio-8080-exec-1] c.e.e.e.service.TourRatingService        : Getting average score of ratings
 2020-04-14 00:09:51.388 DEBUG 5148 --- [http-nio-8080-exec-4] c.e.e.e.web.TourRatingController         : Getting all reating for tour 1
 2020-04-14 00:10:23.815  INFO 5148 --- [http-nio-8080-exec-5] c.e.e.e.web.TourRatingController         : Created new rating for tour 1
+2020-04-14 00:16:11.526  INFO 5148 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-04-14 00:16:11.529  INFO 5148 --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-14 00:16:11.531  INFO 5148 --- [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 00:16:11.532  INFO 5148 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-14 00:16:11.538  INFO 5148 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
