@@ -1,6 +1,9 @@
 package com.example.ec.exploreca.service;
 
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -8,6 +11,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.example.ec.exploreca.domain.Role;
+import com.example.ec.exploreca.domain.User;
 import com.example.ec.exploreca.repo.RoleRepository;
 import com.example.ec.exploreca.repo.UserRepository;
 
@@ -33,6 +38,23 @@ public class UserService {
 
     public Authentication signin(String username, String password) {
         return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+    }
+    
+    public Optional<User> signup(String username, String password, String firstName, String lastName) {
+        if (!userRepository.findByUsername(username).isPresent()) {
+            Optional<Role> role = roleRepository.findByRoleName("ROLE_CSR");
+            return Optional.of(userRepository.save
+                    (new User(username,
+                            passwordEncoder.encode(password),
+                            role.get(),
+                            firstName,
+                            lastName)));
+        }
+        return Optional.empty();
+    }
+
+    public List<User> getAll() {
+        return userRepository.findAll();
     }
 
  }
