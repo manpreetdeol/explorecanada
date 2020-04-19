@@ -60,6 +60,7 @@ public class UserService {
     }
     
     public Optional<User> signup(String username, String password, String firstName, String lastName) {
+    	LOGGER.info("An admin user attempting to create a user");
         if (!userRepository.findByUsername(username).isPresent()) {
             Optional<Role> role = roleRepository.findByRoleName("ROLE_CSR");
             return Optional.of(userRepository.save
