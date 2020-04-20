@@ -1,6 +1,7 @@
 # Extending, Securing and Dockerizing Spring Boot Microservices
 "Extending, Securing and Dockerizing Spring Boot Microservices" from LinkedIn Learning.
-by, Manpreet Singh
+by, Mary Ellen Bowman, @MEllenBowman
+
 
 
 Final Product requires External MySql Database.
@@ -9,6 +10,7 @@ Install Docker For Mac/Windows/Linux
 Set JAVA_HOME
 Set M2_HOME
 Add M2_HOME/bin to the execution path
+mvn package -DskipTests
 #### Docker Commands
 ##### Start MySql Container (downloads image if not found)
 ``
@@ -44,11 +46,8 @@ docker rm ec-mysql
 ``
 docker rmi mysql:latest
 ``
-
-
-
-#### Startup with Profile settings ####
-##### Default profile, H2 database #####
+#### Startup with Profile settings
+##### Default profile, H2 database
 ``
 mvn spring-boot:run
 ``
@@ -67,4 +66,21 @@ or
 
 ``
 java  -Dspring.profiles.active=mysql -jar target/explorecali-2.0.0-SNAPSHOT.jar
+``
+#### Dockerize Explore California
+##### Build jar
+``
+mvn package -DskipTests
+``
+##### Build Docker image
+``
+docker build -t explorecali .
+``
+##### Run Docker container
+``
+docker run  --name ec-app -p 8080:8080  --link ec-mysql:mysql -d explorecali
+``
+##### enter Docker container
+``
+docker exec -t -i ec-app /bin/bash
 ``
